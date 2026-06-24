@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>❤️UrHomey | Short-Term Rental Arbitrage Partners</title>
+<title>UrHomey | Short-Term Rental Arbitrage Partners</title>
 <meta name="description" content="LuvUrHomey partners with landlords and real estate agents to transform long-term rentals into high-performing short-term stays — guaranteed rent, zero hassle.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
@@ -15,7 +15,19 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="logo">❤️<span>Ur</span>Homey</a>
+    <a href="#top" class="logo">
+      <svg class="logo-heart" viewBox="0 0 32 28" aria-hidden="true">
+        <defs>
+          <linearGradient id="heartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--gold-light)"/>
+            <stop offset="100%" stop-color="var(--gold)"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#heartGrad)" d="M16 26.5C16 26.5 2.2 17 2.2 8.4C2.2 3.9 5.9 1 9.8 1.4C12.9 1.7 15.1 4.3 16 6.8C16.9 4.3 19.1 1.7 22.2 1.4C26.1 1 29.8 3.9 29.8 8.4C29.8 17 16 26.5 16 26.5Z"/>
+        <path fill="var(--cream)" d="M16 8.2L21.2 12.6V19.4H17.8V15.4H14.2V19.4H10.8V12.6L16 8.2Z"/>
+      </svg>
+      <span class="logo-text">UrHomey</span>
+    </a>
     <nav class="nav-links">
       <a href="#what-we-do">What We Do</a>
       <a href="#how-it-works">How It Works</a>
@@ -39,7 +51,7 @@
   <div class="hero-content">
     <p class="eyebrow">Master Lease &amp; Short-Term Rental Specialists</p>
     <h1>We turn empty houses <span class="hl">into beloved homes — and guaranteed income.</span></h1>
-    <p class="hero-sub">❤️UrHomey signs a 12–18 month lease on your property, fills it with warmth, comfort, and thoughtful design, and pays you guaranteed monthly rent — whether the calendar is full or not.</p>
+    <p class="hero-sub">UrHomey signs a 12–18 month lease on your property, fills it with warmth, comfort, and thoughtful design, and pays you guaranteed monthly rent — whether the calendar is full or not.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">List Your Property</a>
       <a href="#portfolio" class="btn btn-ghost">See Our Properties →</a>
@@ -169,9 +181,9 @@
   </div>
   <div class="numbers-grid">
     <div class="num-card">
-      <div class="num-big"><strong data-count="94">0</strong><span>%</span></div>
+      <div class="num-big"><strong data-count="86">0</strong><span>%</span></div>
       <p>Average Portfolio Occupancy Rate</p>
-      <div class="bar"><span style="width:94%"></span></div>
+      <div class="bar"><span style="width:86%"></span></div>
     </div>
     <div class="num-card">
       <div class="num-big"><strong data-count="100">0</strong><span>%</span></div>
@@ -189,21 +201,30 @@
       <div class="bar"><span style="width:98%"></span></div>
     </div>
   </div>
-  <div class="occupancy-chart">
-    <h3>12-Month Occupancy Trend (Portfolio Average)</h3>
-    <div class="chart" id="occChart">
-      <div class="bar-col" style="--v:78"><span>78%</span><label>Jan</label></div>
-      <div class="bar-col" style="--v:82"><span>82%</span><label>Feb</label></div>
-      <div class="bar-col" style="--v:85"><span>85%</span><label>Mar</label></div>
-      <div class="bar-col" style="--v:90"><span>90%</span><label>Apr</label></div>
-      <div class="bar-col" style="--v:93"><span>93%</span><label>May</label></div>
-      <div class="bar-col" style="--v:96"><span>96%</span><label>Jun</label></div>
-      <div class="bar-col" style="--v:97"><span>97%</span><label>Jul</label></div>
-      <div class="bar-col" style="--v:95"><span>95%</span><label>Aug</label></div>
-      <div class="bar-col" style="--v:91"><span>91%</span><label>Sep</label></div>
-      <div class="bar-col" style="--v:88"><span>88%</span><label>Oct</label></div>
-      <div class="bar-col" style="--v:92"><span>92%</span><label>Nov</label></div>
-      <div class="bar-col" style="--v:94"><span>94%</span><label>Dec</label></div>
+  <div class="chart-cards">
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <h3>Monthly Occupancy Rate</h3>
+        <span class="chart-pill">Last 12 Months</span>
+      </div>
+      <div class="line-chart-wrap">
+        <svg id="occLineChart" viewBox="0 0 600 220" preserveAspectRatio="none"></svg>
+        <div class="chart-tooltip" id="occTooltip"></div>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <h3>Revenue Generated for Owners</h3>
+        <span class="chart-pill">vs. Traditional Lease</span>
+      </div>
+      <div class="bar-chart-wrap">
+        <svg id="revBarChart" viewBox="0 0 600 220" preserveAspectRatio="none"></svg>
+        <div class="chart-tooltip" id="revTooltip"></div>
+      </div>
+      <div class="chart-legend">
+        <span><i class="dot dot-gold"></i>Arbitrage Income</span>
+        <span><i class="dot dot-cream"></i>Traditional Lease</span>
+      </div>
     </div>
   </div>
 </section>
@@ -301,7 +322,19 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <a href="#top" class="logo">❤️<span>Ur</span>Homey</a>
+    <a href="#top" class="logo">
+      <svg class="logo-heart" viewBox="0 0 32 28" aria-hidden="true">
+        <defs>
+          <linearGradient id="heartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--gold-light)"/>
+            <stop offset="100%" stop-color="var(--gold)"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#heartGrad)" d="M16 26.5C16 26.5 2.2 17 2.2 8.4C2.2 3.9 5.9 1 9.8 1.4C12.9 1.7 15.1 4.3 16 6.8C16.9 4.3 19.1 1.7 22.2 1.4C26.1 1 29.8 3.9 29.8 8.4C29.8 17 16 26.5 16 26.5Z"/>
+        <path fill="var(--cream)" d="M16 8.2L21.2 12.6V19.4H17.8V15.4H14.2V19.4H10.8V12.6L16 8.2Z"/>
+      </svg>
+      <span class="logo-text">UrHomey</span>
+    </a>
     <p>© <span id="year"></span> LuvUrHomey. Rental arbitrage, reimagined.</p>
     <div class="footer-links">
       <a href="#what-we-do">What We Do</a>
