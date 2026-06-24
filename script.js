@@ -207,18 +207,3 @@ function renderBarChart() {
 
 renderLineChart();
 renderBarChart();
-
-// Lead form
-const form = document.getElementById('leadForm');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  const originalText = btn.textContent;
-  btn.textContent = 'Thanks! We\'ll be in touch within 48 hours →';
-  btn.disabled = true;
-  setTimeout(() => {
-    form.reset();
-    btn.textContent = originalText;
-    btn.disabled = false;
-  }, 4000);
-});
