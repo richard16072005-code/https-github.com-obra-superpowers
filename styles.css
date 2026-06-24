@@ -1,12 +1,12 @@
 :root {
-  --ink: #14110f;
-  --cream: #faf6ee;
-  --cream-2: #f1ead9;
-  --gold: #c8923f;
-  --gold-light: #e8c98a;
-  --forest: #2f4538;
-  --forest-deep: #1d2b22;
-  --line: rgba(20,17,15,0.1);
+  --ink: #3a2418;
+  --cream: #fdf6ec;
+  --cream-2: #f7e8d4;
+  --gold: #d97843;
+  --gold-light: #f3b988;
+  --forest: #7a3b2e;
+  --forest-deep: #3d2218;
+  --line: rgba(58,36,24,0.12);
   --radius: 18px;
   --font-display: 'Fraunces', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -79,8 +79,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s;
   cursor:pointer; border:none;
 }
-.btn-primary { background: var(--gold); color: var(--ink); box-shadow: 0 8px 20px rgba(200,146,63,0.35); }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(200,146,63,0.45); }
+.btn-primary { background: var(--gold); color: var(--ink); box-shadow: 0 8px 20px rgba(217,120,67,0.35); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(217,120,67,0.45); }
 .btn-ghost { background: transparent; color: var(--cream); border: 1.5px solid rgba(250,246,238,0.5); }
 .btn-ghost:hover { background: rgba(250,246,238,0.12); }
 .btn-small { padding: 0.6rem 1.3rem; font-size:0.85rem; }
@@ -95,15 +95,15 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .hero-bg { position:absolute; inset:0; z-index:0; }
 .hero-bg::after {
   content:''; position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(13,20,16,0.55) 0%, rgba(13,20,16,0.78) 55%, rgba(13,20,16,0.96) 100%);
+  background: linear-gradient(180deg, rgba(45,25,17,0.55) 0%, rgba(45,25,17,0.78) 55%, rgba(45,25,17,0.96) 100%);
 }
 .hero-img { position:absolute; background-size:cover; background-position:center; filter: saturate(0.9); }
 .img-a { top:-5%; left:-8%; width:42%; height:60%; border-radius: 0 0 40% 0;
-  background-image: linear-gradient(120deg, #3a4f3e, #1d2b22), url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=900&q=60'); background-blend-mode:overlay; }
+  background-image: linear-gradient(120deg, #7a3b2e, #3d2218), url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=900&q=60'); background-blend-mode:overlay; }
 .img-b { top:5%; right:-10%; width:38%; height:55%; border-radius: 0 0 0 40%;
-  background-image: linear-gradient(120deg, #3a4f3e, #1d2b22), url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=60'); background-blend-mode:overlay; }
+  background-image: linear-gradient(120deg, #7a3b2e, #3d2218), url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=60'); background-blend-mode:overlay; }
 .img-c { bottom:-15%; left:30%; width:40%; height:45%; border-radius: 40% 40% 0 0;
-  background-image: linear-gradient(120deg, #3a4f3e, #1d2b22), url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&q=60'); background-blend-mode:overlay; }
+  background-image: linear-gradient(120deg, #7a3b2e, #3d2218), url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&q=60'); background-blend-mode:overlay; }
 
 .hero-content { position:relative; z-index:2; max-width: 800px; text-align:center; }
 .hero h1 {
@@ -172,7 +172,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .p-img-2 { background-image: url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=700&q=60'); }
 .p-img-3 { background-image: url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=700&q=60'); }
 .p-img-4 { background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=700&q=60'); }
-.p-card::after { content:''; position:absolute; inset:0; background: linear-gradient(180deg, transparent 40%, rgba(13,20,16,0.85) 100%); }
+.p-card::after { content:''; position:absolute; inset:0; background: linear-gradient(180deg, transparent 40%, rgba(45,25,17,0.85) 100%); }
 .p-info { position:absolute; left:0; bottom:0; right:0; z-index:2; padding: 1.3rem; color: var(--cream); }
 .p-info h3 { font-size:1.15rem; }
 .p-info p { font-size:0.82rem; opacity:0.8; margin: 0.2rem 0 0.6rem; }
