@@ -61,9 +61,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   display:flex; align-items:center; justify-content:space-between; gap:2rem;
 }
 .logo { display:flex; align-items:center; gap:0.5rem; font-family: var(--font-display); font-size:1.4rem; font-weight:700; color:var(--ink); white-space:nowrap; }
-.logo span { color: var(--gold); }
-.logo-heart { width: 28px; height: 25px; flex-shrink:0; }
-.footer-inner .logo-heart { width: 24px; height: 21px; }
+.logo-mark { width: 50px; height: auto; flex-shrink:0; }
+.footer-inner .logo-mark { width: 42px; }
 .nav-links { display:flex; gap:2rem; flex:1; justify-content:center; font-size:0.92rem; font-weight:500; }
 .nav-links a { position:relative; opacity:0.85; transition:opacity 0.2s; }
 .nav-links a:hover { opacity:1; }
@@ -243,6 +242,19 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .testi p { font-family: var(--font-display); font-size: 1.05rem; font-style:italic; margin-bottom:1.4rem; }
 .testi-who strong { display:block; font-size:0.92rem; }
 .testi-who span { font-size:0.8rem; opacity:0.6; }
+
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 760px; margin: 0 auto; display:flex; flex-direction:column; gap:0.9rem; }
+.faq-item { background: var(--cream); border:1px solid var(--line); border-radius: var(--radius); overflow:hidden; }
+.faq-q {
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  background:none; border:none; cursor:pointer; padding: 1.3rem 1.6rem; text-align:left;
+  font-family: var(--font-body); font-size:1rem; font-weight:600; color: var(--ink);
+}
+.faq-icon { font-size:1.3rem; color: var(--gold); flex-shrink:0; transition: transform 0.25s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition: max-height 0.3s ease; }
+.faq-a p { padding: 0 1.6rem 1.4rem; font-size:0.95rem; opacity:0.75; }
 
 /* ---------- CONTACT ---------- */
 .contact { background: var(--forest-deep); max-width:none; color: var(--cream); }
