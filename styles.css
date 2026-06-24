@@ -229,7 +229,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .dot-cream { background: rgba(250,246,238,0.45); }
 
 /* ---------- PARTNERS ---------- */
-.partner-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.partner-grid { display:grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
 .partner-col {
   background: var(--cream-2); border-radius: var(--radius); padding: 2.4rem; border: 1px solid var(--line);
 }
@@ -278,7 +278,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .p-large { grid-row: span 1; }
   .numbers-grid { grid-template-columns: 1fr 1fr; }
-  .partner-grid, .testi-track { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: 1fr 1fr; }
+  .testi-track { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
