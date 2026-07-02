@@ -48,7 +48,7 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // Reveal-on-scroll for cards, steps, etc.
-const revealTargets = document.querySelectorAll('.card, .step, .p-card, .num-card, .testi, .partner-col');
+const revealTargets = document.querySelectorAll('.card, .step, .p-card, .num-card, .testi-slide, .partner-col');
 revealTargets.forEach(el => el.classList.add('reveal'));
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -152,58 +152,33 @@ function renderLineChart() {
   });
 }
 
-function renderBarChart() {
-  const svg = document.getElementById('revBarChart');
-  if (!svg) return;
-  const w = 600, h = 220, padL = 38, padR = 8, padT = 14, padB = 26;
-  const max = 5500;
-  const plotW = w - padL - padR, plotH = h - padT - padB;
-  const groupW = plotW / arbitrageIncome.length;
-  const barW = groupW * 0.32;
-  const yFor = v => padT + plotH - (v / max) * plotH;
-  const tooltip = document.getElementById('revTooltip');
+renderLineChart();
 
-  [0, 1000, 2000, 3000, 4000, 5000].forEach(v => {
-    const y = yFor(v);
-    svg.appendChild(svgEl('line', { x1: padL, x2: w - padR, y1: y, y2: y, class: 'chart-grid-line' }));
-    const label = svgEl('text', { x: 2, y: y + 3, class: 'chart-axis-label' });
-    label.textContent = '$' + v;
-    svg.appendChild(label);
-  });
+// ---- Testimonial slider ----
+const slides = document.querySelectorAll('.testi-slide');
+const dots = document.querySelectorAll('.testi-dot');
+let current = 0;
+let autoTimer;
 
-  months.forEach((m, i) => {
-    const groupX = padL + i * groupW;
-    const xArb = groupX + groupW * 0.18;
-    const xTrad = groupX + groupW * 0.54;
-
-    const arbVal = arbitrageIncome[i], tradVal = traditionalIncome[i];
-    const yArb = yFor(arbVal), yTrad = yFor(tradVal);
-
-    const barArb = svgEl('rect', {
-      x: xArb, y: yArb, width: barW, height: padT + plotH - yArb,
-      rx: 3, class: 'chart-bar chart-bar-arb'
-    });
-    const barTrad = svgEl('rect', {
-      x: xTrad, y: yTrad, width: barW, height: padT + plotH - yTrad,
-      rx: 3, class: 'chart-bar chart-bar-trad'
-    });
-
-    [[barArb, 'Arbitrage', arbVal, xArb], [barTrad, 'Traditional Lease', tradVal, xTrad]].forEach(([bar, label, val, x]) => {
-      bar.addEventListener('mouseenter', () => {
-        tooltip.textContent = `${m} · ${label}: $${val.toLocaleString()}`;
-        tooltip.style.left = `${((x + barW / 2) / w) * 100}%`;
-        tooltip.style.top = `${(yFor(val) / h) * 100}%`;
-        tooltip.classList.add('show');
-      });
-      bar.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
-      svg.appendChild(bar);
-    });
-
-    const label = svgEl('text', { x: groupX + groupW / 2, y: h - 6, class: 'chart-axis-label', 'text-anchor': 'middle' });
-    label.textContent = m;
-    svg.appendChild(label);
-  });
+function goTo(index) {
+  slides[current].classList.remove('active');
+  dots[current].classList.remove('active');
+  current = (index + slides.length) % slides.length;
+  slides[current].classList.add('active');
+  dots[current].classList.add('active');
 }
 
-renderLineChart();
-renderBarChart();
+function startAuto() {
+  autoTimer = setInterval(() => goTo(current + 1), 5000);
+}
+
+function resetAuto() {
+  clearInterval(autoTimer);
+  startAuto();
+}
+
+document.getElementById('testiNext')?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+document.getElementById('testiPrev')?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetAuto(); }));
+
+startAuto();

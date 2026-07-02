@@ -128,7 +128,7 @@
 <section class="section sydney-section" id="portfolio">
   <div class="sydney-inner">
     <div class="sydney-img-wrap">
-      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=75" alt="Premium furnished apartment interior" class="sydney-img" />
+      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=75" alt="Premium furnished apartment with city views" class="sydney-img" />
     </div>
     <div class="sydney-copy">
       <p class="eyebrow">Our Properties · Sydney</p>
@@ -170,7 +170,7 @@
   <div class="chart-cards">
     <div class="chart-card">
       <div class="chart-card-head">
-        <h3>Monthly Occupancy Rate</h3>
+        <h3>Guest Satisfaction Score</h3>
         <span class="chart-pill">Last 12 Months</span>
       </div>
       <div class="line-chart-wrap">
@@ -178,19 +178,12 @@
         <div class="chart-tooltip" id="occTooltip"></div>
       </div>
     </div>
-    <div class="chart-card">
-      <div class="chart-card-head">
-        <h3>Monthly Bookings</h3>
-        <span class="chart-pill">Corporate vs. General</span>
-      </div>
-      <div class="bar-chart-wrap">
-        <svg id="revBarChart" viewBox="0 0 600 220" preserveAspectRatio="none"></svg>
-        <div class="chart-tooltip" id="revTooltip"></div>
-      </div>
-      <div class="chart-legend">
-        <span><i class="dot dot-gold"></i>Corporate Stays</span>
-        <span><i class="dot dot-cream"></i>General Bookings</span>
-      </div>
+    <div class="chart-card bookings-milestone">
+      <div class="milestone-icon">🏆</div>
+      <div class="milestone-number">150<span>+</span></div>
+      <div class="milestone-label">Bookings Completed</div>
+      <p class="milestone-sub">Every stay personally managed and verified by our team — from first enquiry to check-out.</p>
+      <div class="milestone-stars">★★★★★ <span>4.9 avg. rating across all stays</span></div>
     </div>
   </div>
 </section>
@@ -248,18 +241,80 @@
     <p class="eyebrow">What Our Guests Say</p>
     <h2>Real stays. Real comfort. Real reviews.</h2>
   </div>
-  <div class="testi-track">
-    <div class="testi">
-      <p>"Everything was spotless and exactly as pictured. Check-in was effortless and the location couldn't have been better."</p>
-      <div class="testi-who"><strong>Daniel R.</strong><span>Guest, Downtown Stay</span></div>
+  <div class="testi-slider-wrap">
+    <div class="testi-slider" id="testiSlider">
+
+      <div class="testi-slide active">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Everything was spotless and exactly as pictured. Check-in was seamless, the apartment had everything I needed for a two-week work trip, and the location was perfect for getting around the city."</p>
+        <div class="testi-profile">
+          <img src="https://i.pravatar.cc/80?img=12" alt="Daniel R." class="testi-avatar" />
+          <div>
+            <strong>Daniel R.</strong>
+            <span>Corporate Guest · 2-week stay, Sydney CBD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"I had a question at 11pm and got a reply within minutes. It genuinely felt like staying somewhere people actually cared about you as a guest — not just another booking."</p>
+        <div class="testi-profile">
+          <img src="https://i.pravatar.cc/80?img=47" alt="Priya K." class="testi-avatar" />
+          <div>
+            <strong>Priya K.</strong>
+            <span>Business Traveller · Extended stay, North Sydney</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"The furnishing and little details made it feel like a real home, not just a rental. I'm based interstate and use it monthly for client visits — I wouldn't book anywhere else now."</p>
+        <div class="testi-profile">
+          <img src="https://i.pravatar.cc/80?img=33" alt="Marcus T." class="testi-avatar" />
+          <div>
+            <strong>Marcus T.</strong>
+            <span>Consultant · Monthly corporate stays</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"We placed three of our team members here for a project placement and every single one of them said it was the best corporate accommodation they'd ever stayed in. Will be using again."</p>
+        <div class="testi-profile">
+          <img src="https://i.pravatar.cc/80?img=5" alt="Sarah M." class="testi-avatar" />
+          <div>
+            <strong>Sarah M.</strong>
+            <span>Operations Manager · Team placement, Sydney</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Honestly couldn't fault it. Fast WiFi, great views, incredibly clean. I've stayed in 5-star hotels that weren't this comfortable. The team sorted everything before I even arrived."</p>
+        <div class="testi-profile">
+          <img src="https://i.pravatar.cc/80?img=68" alt="James L." class="testi-avatar" />
+          <div>
+            <strong>James L.</strong>
+            <span>Finance Professional · 3-week stay, Pyrmont</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="testi">
-      <p>"I had a question at 11pm and got a reply within minutes. It felt like staying somewhere people actually cared about."</p>
-      <div class="testi-who"><strong>Priya K.</strong><span>Guest, Weekend Trip</span></div>
-    </div>
-    <div class="testi">
-      <p>"The furnishing and little details made it feel like a real home, not just a rental. I'd book again without hesitation."</p>
-      <div class="testi-who"><strong>Marcus T.</strong><span>Guest, Extended Stay</span></div>
+    <div class="testi-controls">
+      <button class="testi-prev" id="testiPrev" aria-label="Previous">&#8592;</button>
+      <div class="testi-dots" id="testiDots">
+        <span class="testi-dot active"></span>
+        <span class="testi-dot"></span>
+        <span class="testi-dot"></span>
+        <span class="testi-dot"></span>
+        <span class="testi-dot"></span>
+      </div>
+      <button class="testi-next" id="testiNext" aria-label="Next">&#8594;</button>
     </div>
   </div>
 </section>
