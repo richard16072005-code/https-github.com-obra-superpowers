@@ -152,13 +152,10 @@ function renderLineChart() {
   });
 }
 
-renderLineChart();
-
-// ---- Testimonial slider ----
+// ---- Testimonial auto-rotator ----
 const slides = document.querySelectorAll('.testi-slide');
 const dots = document.querySelectorAll('.testi-dot');
 let current = 0;
-let autoTimer;
 
 function goTo(index) {
   slides[current].classList.remove('active');
@@ -168,17 +165,4 @@ function goTo(index) {
   dots[current].classList.add('active');
 }
 
-function startAuto() {
-  autoTimer = setInterval(() => goTo(current + 1), 5000);
-}
-
-function resetAuto() {
-  clearInterval(autoTimer);
-  startAuto();
-}
-
-document.getElementById('testiNext')?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-document.getElementById('testiPrev')?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetAuto(); }));
-
-startAuto();
+setInterval(() => goTo(current + 1), 4000);
