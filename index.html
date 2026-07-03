@@ -22,17 +22,32 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="logo">
-      <svg class="logo-mark" viewBox="0 0 200 180" role="img" aria-label="YourHomey">
+    <a href="#top" class="logo logo-new">
+      <svg class="logo-icon" viewBox="0 0 80 72" role="img" aria-label="LuvYourHomey" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="heartGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="var(--heart-red-light)"/>
-            <stop offset="100%" stop-color="var(--heart-red)"/>
-          </linearGradient>
+          <radialGradient id="hg" cx="38%" cy="30%" r="65%">
+            <stop offset="0%" stop-color="#f47c6a"/>
+            <stop offset="55%" stop-color="#d6402f"/>
+            <stop offset="100%" stop-color="#a82318"/>
+          </radialGradient>
         </defs>
-        <path fill="url(#heartGrad)" d="M100 168C100 168 18 108 18 62C18 32 44 12 70 12C86 12 96 24 100 40C104 24 114 12 130 12C156 12 182 32 182 62C182 108 100 168 100 168Z"/>
-        <text x="100" y="95" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-style="italic" font-size="32" fill="var(--cream)" textLength="146" lengthAdjust="spacingAndGlyphs">YourHomey</text>
+        <!-- Heart -->
+        <path fill="url(#hg)" d="M40 68C40 68 4 44 4 22C4 10 13 3 23 3C30 3 36 7 40 14C44 7 50 3 57 3C67 3 76 10 76 22C76 44 40 68 40 68Z"/>
+        <!-- Shine highlight -->
+        <ellipse cx="26" cy="16" rx="9" ry="6" fill="white" opacity="0.28" transform="rotate(-30 26 16)"/>
+        <!-- House body -->
+        <rect x="30" y="37" width="20" height="16" rx="1" fill="#fdf6ec"/>
+        <!-- Door -->
+        <rect x="37" y="44" width="6" height="9" rx="1" fill="#d97843"/>
+        <!-- Roof -->
+        <polygon points="27,38 40,24 53,38" fill="#f3b988"/>
+        <!-- Chimney -->
+        <rect x="44" y="26" width="4" height="7" rx="1" fill="#f3b988"/>
       </svg>
+      <div class="logo-text-wrap">
+        <span class="logo-name">LuvYourHomey</span>
+        <span class="logo-tagline">HOME AWAY FROM HOME</span>
+      </div>
     </a>
     <nav class="nav-links">
       <a href="#what-we-do">What We Do</a>
@@ -373,17 +388,26 @@
 
 <footer class="footer">
   <div class="footer-inner">
-    <a href="#top" class="logo">
-      <svg class="logo-mark" viewBox="0 0 200 180" role="img" aria-label="YourHomey">
+    <a href="#top" class="logo logo-new">
+      <svg class="logo-icon" viewBox="0 0 80 72" role="img" aria-label="LuvYourHomey" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="heartGradFooter" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="var(--heart-red-light)"/>
-            <stop offset="100%" stop-color="var(--heart-red)"/>
-          </linearGradient>
+          <radialGradient id="hgf" cx="38%" cy="30%" r="65%">
+            <stop offset="0%" stop-color="#f47c6a"/>
+            <stop offset="55%" stop-color="#d6402f"/>
+            <stop offset="100%" stop-color="#a82318"/>
+          </radialGradient>
         </defs>
-        <path fill="url(#heartGradFooter)" d="M100 168C100 168 18 108 18 62C18 32 44 12 70 12C86 12 96 24 100 40C104 24 114 12 130 12C156 12 182 32 182 62C182 108 100 168 100 168Z"/>
-        <text x="100" y="95" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-style="italic" font-size="32" fill="var(--cream)" textLength="146" lengthAdjust="spacingAndGlyphs">YourHomey</text>
+        <path fill="url(#hgf)" d="M40 68C40 68 4 44 4 22C4 10 13 3 23 3C30 3 36 7 40 14C44 7 50 3 57 3C67 3 76 10 76 22C76 44 40 68 40 68Z"/>
+        <ellipse cx="26" cy="16" rx="9" ry="6" fill="white" opacity="0.28" transform="rotate(-30 26 16)"/>
+        <rect x="30" y="37" width="20" height="16" rx="1" fill="#fdf6ec"/>
+        <rect x="37" y="44" width="6" height="9" rx="1" fill="#d97843"/>
+        <polygon points="27,38 40,24 53,38" fill="#f3b988"/>
+        <rect x="44" y="26" width="4" height="7" rx="1" fill="#f3b988"/>
       </svg>
+      <div class="logo-text-wrap">
+        <span class="logo-name">LuvYourHomey</span>
+        <span class="logo-tagline">HOME AWAY FROM HOME</span>
+      </div>
     </a>
     <p>© <span id="year"></span> YourHomey. Premium corporate accommodation in Sydney.</p>
     <div class="footer-links">

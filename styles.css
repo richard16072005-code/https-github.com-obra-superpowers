@@ -65,6 +65,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .logo { display:flex; align-items:center; gap:0.5rem; font-family: var(--font-display); font-size:1.4rem; font-weight:700; color:var(--ink); white-space:nowrap; }
 .logo-mark { width: 96px; height: auto; flex-shrink:0; }
 .footer-inner .logo-mark { width: 80px; }
+.logo-new { gap: 0.75rem; }
+.logo-icon { width: 44px; height: auto; flex-shrink:0; }
+.logo-text-wrap { display:flex; flex-direction:column; gap:1px; }
+.logo-name { font-family: var(--font-display); font-size: 1.15rem; font-weight:600; color: var(--ink); line-height:1.1; }
+.footer-inner .logo-name { color: var(--cream); }
+.logo-tagline { font-size: 0.55rem; letter-spacing: 0.18em; text-transform:uppercase; color: var(--gold); font-family: var(--font-body); font-weight:600; }
+.footer-inner .logo-tagline { color: var(--gold-light); }
 .nav-links { display:flex; gap:2rem; flex:1; justify-content:center; font-size:0.92rem; font-weight:500; }
 .nav-links a { position:relative; opacity:0.85; transition:opacity 0.2s; }
 .nav-links a:hover { opacity:1; }
