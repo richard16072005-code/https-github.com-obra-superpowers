@@ -1,5 +1,45 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ── Property photo carousel ──
+(function() {
+  const slides = document.querySelectorAll('.prop-slide');
+  const dotsWrap = document.getElementById('carouselDots');
+  const currentEl = document.getElementById('carouselCurrent');
+  if (!slides.length || !dotsWrap) return;
+
+  document.getElementById('carouselTotal').textContent = slides.length;
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Photo ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+    currentEl.textContent = current + 1;
+  }
+
+  document.querySelector('.carousel-btn.prev').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.carousel-btn.next').addEventListener('click', () => goTo(current + 1));
+
+  // Touch swipe
+  let startX = 0;
+  const carousel = document.getElementById('propCarousel');
+  carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-item').forEach(item => {
   const q = item.querySelector('.faq-q');

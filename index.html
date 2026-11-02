@@ -149,17 +149,53 @@
   </div>
 </section>
 
-<!-- SYDNEY PROPERTIES -->
-<section class="section sydney-section" id="portfolio">
-  <div class="sydney-inner">
-    <div class="sydney-img-wrap">
-      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=75" alt="Premium furnished apartment with city views" class="sydney-img" />
+<!-- OUR PROPERTIES -->
+<section class="section properties-section" id="portfolio">
+  <div class="section-head">
+    <p class="eyebrow">Our Properties · Sydney</p>
+    <h2>Where you'll be staying.</h2>
+  </div>
+
+  <div class="prop-card">
+    <!-- Photo carousel -->
+    <div class="prop-carousel" id="propCarousel">
+      <div class="prop-slides">
+        <div class="prop-slide active"><img src="photos/photo1.jpg" alt="Cosy Mascot Stay – living area"></div>
+        <div class="prop-slide"><img src="photos/photo2.jpg" alt="Cosy Mascot Stay – bedroom"></div>
+        <div class="prop-slide"><img src="photos/photo3.jpg" alt="Cosy Mascot Stay – kitchen"></div>
+        <div class="prop-slide"><img src="photos/photo4.jpg" alt="Cosy Mascot Stay – patio"></div>
+        <div class="prop-slide"><img src="photos/photo5.jpg" alt="Cosy Mascot Stay – bathroom"></div>
+      </div>
+      <button class="carousel-btn prev" aria-label="Previous photo">&#8249;</button>
+      <button class="carousel-btn next" aria-label="Next photo">&#8250;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <div class="carousel-counter"><span id="carouselCurrent">1</span> / <span id="carouselTotal">5</span></div>
     </div>
-    <div class="sydney-copy">
-      <p class="eyebrow">Our Properties · Sydney</p>
-      <h2>Premium apartments available for your team in Sydney.</h2>
-      <p>Our Sydney properties are privately managed and available exclusively to corporate clients. Reach out to find out what's available for your company's next project, placement, or business trip.</p>
-      <a href="mailto:hello@luvyourhomey.com?subject=Sydney Property Enquiry" class="btn btn-primary">Enquire About Sydney Properties</a>
+
+    <!-- Property details -->
+    <div class="prop-details">
+      <div class="prop-header">
+        <h3 class="prop-title">Cosy Mascot Stay</h3>
+        <p class="prop-subtitle">Near Airport w/ Patio + Parking</p>
+      </div>
+
+      <div class="prop-meta">
+        <span class="prop-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 2 Bedrooms</span>
+        <span class="prop-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 12a2 2 0 01-2-2V6h20v4a2 2 0 01-2 2M6 12v8m12-8v8M8 12v8m8-8v8"/></svg> 2 Bathrooms</span>
+        <span class="prop-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> 2 Car Spaces</span>
+        <span class="prop-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg> Up to 4 Guests</span>
+      </div>
+
+      <div class="prop-features">
+        <div class="prop-feature"><span class="feat-icon">✈️</span><span>5 min to Sydney Airport</span></div>
+        <div class="prop-feature"><span class="feat-icon">🚉</span><span>Walk to Mascot Train Station</span></div>
+        <div class="prop-feature"><span class="feat-icon">🏙️</span><span>Quick access to Sydney CBD</span></div>
+        <div class="prop-feature"><span class="feat-icon">🛒</span><span>Grocery stores &amp; restaurants nearby</span></div>
+        <div class="prop-feature"><span class="feat-icon">💻</span><span>Remote workspace setup</span></div>
+        <div class="prop-feature"><span class="feat-icon">👶</span><span>Baby cot &amp; high chair available</span></div>
+      </div>
+
+      <a href="https://airbnb.com.au/h/cosy-mascot-stay" target="_blank" rel="noopener" class="btn btn-primary prop-cta">View on Airbnb →</a>
     </div>
   </div>
 </section>
