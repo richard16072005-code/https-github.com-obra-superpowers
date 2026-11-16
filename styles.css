@@ -415,6 +415,7 @@ body { overflow-x: hidden; }
 }
 @media (max-width: 600px) {
   .cards.three, .steps, .portfolio-grid, .numbers-grid { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: 1fr; }
   .hero-stats { gap:1.4rem; }
   .trust-logos { gap:1.2rem; font-size:0.95rem; }
 }
